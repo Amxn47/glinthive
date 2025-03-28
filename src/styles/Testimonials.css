@@ -1,0 +1,83 @@
+/* src/styles/Testimonials.css */
+.testimonials {
+    max-width: 80vw;
+    margin: 40px auto;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    overflow: hidden; /* Hide overflow from sliding cards */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.testimonials-slider {
+    width: 100%;
+    overflow: hidden; /* Ensure cards don’t spill out */
+}
+
+.slider-track {
+    display: flex;
+    width: calc(300px * 8); /* Width based on card size (300px) * total cards (4 original + 4 duplicated) */
+    animation: slideLeft 20s linear infinite; /* Slide from right to left */
+}
+
+.testimonial-card {
+    flex: 0 0 300px; /* Fixed width for each card */
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 15px; /* Space between cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.testimonial-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.testimonial-card:hover{
+    transform: scale(0.9);
+}
+/* Sliding animation */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0); /* Start at initial position */
+    }
+    100% {
+        transform: translateX(-30%); /* Move left by half the track width (4 cards) */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+    .testimonial-card {
+        flex: 0 0 250px; /* Smaller cards on mobile */
+    }
+    .slider-track {
+        width: calc(250px * 8); /* Adjust track width for mobile */
+    }
+}

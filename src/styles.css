@@ -1,0 +1,87 @@
+/* src/styles.css
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.sticky-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.sticky-navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+}
+
+.cta-button {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.green {
+    background: #28a745;
+}
+
+.blue {
+    background: #007bff;
+}
+
+.services-overview,
+.why-choose-us,
+.testimonials,
+.cta-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.services-grid,
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.explore-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+} */

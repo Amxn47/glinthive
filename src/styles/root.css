@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap');
+
+:root {
+    --primary-color: #FFC107;
+    --secondary-color: #C8F7BA;
+    --accent-color: #A551A9;
+    --bg-color: #030303;
+    --bg-color-light: #1e1e1e;
+    --text-color: #F3EAD5;
+    --btn-bg-color: #333333;
+    --card-bg: #252525;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}

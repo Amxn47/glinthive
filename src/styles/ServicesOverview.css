@@ -1,0 +1,151 @@
+/* src/styles/ServicesOverview.css */
+
+.services-overview {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.services-overview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 80vw;
+    margin: 0 auto;
+    animation: blurInTop 0.8s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    animation-fill-mode: forwards;
+    opacity: 0; 
+    transform: translateY(100%) scale(0.6);
+    filter: blur(20px);
+}
+
+.service-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-image {
+    margin: 40px;
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+
+.service-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-content h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.service-content p {
+    text-align: justify;
+    font-size: 1rem;
+    margin: 20px auto;
+    width: 80%;
+    flex-grow: 1;
+}
+
+.service-btn {
+    margin-bottom: 30px;
+    margin-top: auto;
+}
+
+/* Button styles with Hero Section animation */
+.explore-button {
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background fill animation */
+.explore-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    clip-path: ellipse(0% 100% at 0% 50%);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+/* Hover effects */
+.explore-button:hover {
+    border-color: var(--primary-color);
+    /* Full border on hover */
+    color: black;
+    /* Text color change */
+}
+
+.explore-button:hover::before {
+    clip-path: ellipse(150% 100% at 0% 50%);
+}
+
+.blurInTop {
+    animation-name: blurInTop
+}
+
+@keyframes blurInTop {
+    from {
+        transform: translateY(100%) scale(0.6);
+        filter: blur(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-overview h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-content h3 {
+        font-size: 1.25rem;
+    }
+}
