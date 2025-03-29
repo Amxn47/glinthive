@@ -30,7 +30,7 @@ function Testimonials() {
     return (
         <section className="testimonials">
             <h2>Voices of Success</h2>
-            <div className="testimonials-slider">
+            <div className="testimonials-slider mobile-hide">
                 <div className="slider-track">
                     {testimonials.concat(testimonials).map((testimonial, index) => ( // Duplicate for seamless loop
                         <div className="testimonial-card" key={index}>
@@ -40,6 +40,15 @@ function Testimonials() {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="test-grid mobile-show">
+                {testimonials.map((testimonial, index) => (
+                    <div className="mobile-testimonial-card" key={index}>
+                        <img src={testimonial.logo} alt={`${testimonial.company} logo`} className="testimonial-logo" />
+                        <h3>{testimonial.company}</h3>
+                        <p>"{testimonial.text}"</p>
+                    </div>
+                ))}
             </div>
         </section>
     );

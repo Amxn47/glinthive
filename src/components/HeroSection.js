@@ -12,10 +12,11 @@ function HeroSection({ headline, headline1, cta1, cta2 }) {
                     <h1>{headline}</h1>
                     <h1>{headline1}</h1>
                     <div className='subheadline'>
-                        <button>Social Media</button>
-                        <button>Website Development</button>
-                        <button>Mobile Marketing</button>
-                        <button>Graphic Designing</button>
+                        <p className='mobile-show'>Social Media | Website Development | Mobile Marketing | Graphic Designing</p>
+                        <button className='mobile-hide'>Social Media</button>
+                        <button className='mobile-hide'>Website Development</button>
+                        <button className='mobile-hide'>Mobile Marketing</button>
+                        <button className='mobile-hide'>Graphic Designing</button>
                     </div>
                     <div className='cta'>
                         {cta1 && <Link to={cta1.link} className='cta-btn-main'>{cta1.text}
@@ -24,7 +25,7 @@ function HeroSection({ headline, headline1, cta1, cta2 }) {
                             <img src='/arrow.png' alt='arrow' className='arrow'></img></Link>}
                     </div>
                 </div>
-                <div className='hero-img'>
+                <div className='hero-img mobile-hide'>
                     <img src='./rocket.png' alt=''></img>
                 </div>
             </div>

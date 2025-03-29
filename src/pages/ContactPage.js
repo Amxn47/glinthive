@@ -32,7 +32,7 @@ function Contact() {
                 <section className="contact-hero">
                     <h1>Let’s Build Something Amazing Together!</h1>
                     <p>Drop us a message & we’ll get back to you ASAP.</p>
-                    <img alt='' src='/link.png'></img>
+                    <img alt='' src='/link.png' className='mobile-hide'></img>
                 </section>
 
                 {/* Contact Form */}

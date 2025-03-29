@@ -111,7 +111,7 @@ function Services() {
                     <h1>Your Success, Our Expertise!</h1>
                     <p>Explore our range of digital marketing solutions tailored for you.</p>
                 </div>
-                <div className='services-hero-right'>
+                <div className='services-hero-right mobile-hide'>
                     <img alt='' src='/sun.png'></img>
                 </div>
             </section>

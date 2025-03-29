@@ -125,6 +125,7 @@
     max-width: 100px;
     margin-bottom: 15px;
 }
+
 .mission h2,
 .vision h2 {
     font-size: 2rem;
@@ -228,7 +229,7 @@
     border-radius: 12px;
 }
 
-.why-us-item img{
+.why-us-item img {
     max-width: 100px;
     margin-bottom: 10px;
 }
@@ -289,6 +290,7 @@
 .cta-button:hover::before {
     clip-path: ellipse(150% 100% at 0% 50%);
 }
+
 .cta-button .arrow {
     height: 20px;
     position: absolute;
@@ -302,23 +304,41 @@
     opacity: 1;
     transform: translateX(0) scale(1);
 }
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .about-page {
+        max-width: 94vw;
+    }
+
     .about-hero {
         padding: 60px 20px;
     }
 
+    .about-hero h2 {
+        font-size: 1.4rem;
+    }
+
     .about-hero h1 {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 
     .about-hero p {
+        font-size: 1.1rem;
         max-width: 80vw;
     }
 
     .about-mission-vision {
         flex-direction: column;
-        gap: 30px;
+        justify-content: center;
+        margin: 0;
+        max-width: 94vw;
+        padding: 0;
+        gap: 18px;
     }
 
     .about-team h2,
@@ -326,9 +346,59 @@
         font-size: 2rem;
     }
 
+    .team-member {
+        max-width: 94vw;
+    }
+
+    .team-member-content {
+        display: flex;
+        flex-direction: column;
+        width: 94vw;
+    }
+
     .team-photo {
         width: 100px;
         height: 100px;
+        object-fit: cover;
+        object-position: 0 -5px;
+    }
+
+    .about-why-us {
+        padding: 0;
+        margin: 0;
+        max-width: 94vw;
+    }
+
+    .why-us-grid {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .span-2 {
+        grid-column: span 2;
+    }
+
+    .why-us-item {
+        padding: 20px;
+    }
+
+    .why-us-item img {
+        height: 40px;
+    }
+
+    .why-us-item h3 {
+        font-size: 18px;
+    }
+
+    .why-us-item p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .about-cta {
+        margin-top: 40px;
+        padding: 0;
     }
 
     .cta-button {

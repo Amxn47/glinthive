@@ -73,6 +73,10 @@
     font-weight: bolder;
 }
 
+.mobile-show {
+    display: none;
+}
+
 .subheadline {
     margin-top: 20px;
     display: flex;
@@ -212,37 +216,57 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .hero-section {
+        display: flex;
+        padding: 0;
+        margin: 70px 0 0 0;
+        justify-content: center;
+        align-items: center;
+    }
+
     .hero-section-width {
-        flex-direction: column;
-        /* Stack on mobile */
-        max-width: 90vw;
-        /* Wider on smaller screens */
+        max-width: 94vw;
+        padding: 0;
     }
 
     .hero-cta {
         width: 100%;
-        /* Full width on mobile */
-        padding: 20px;
-    }
-
-    .hero-img {
-        width: 100%;
-        /* Full width on mobile */
-        padding: 20px;
+        padding: 0;
+        text-align: center;
     }
 
     .hero-section h1 {
-        font-size: 2.5rem;
-        /* Smaller on mobile */
+        font-size: 30px;
     }
 
-    .subheadline {
-        justify-content: center;
-        /* Center buttons on mobile */
+    .subheadline p{
+        font-size: 14px;
     }
 
     .cta {
+        flex-direction: column;
         justify-content: center;
+        gap: 30px;
+        margin: 60px 0 0 0;
         /* Center CTAs on mobile */
+    }
+
+    .cta-btn-main {
+        background-color: var(--primary-color);
+        color: black;
+        border-radius: 12px;
+        font-weight: bolder;
+        scale: 1.1;
+    }
+
+    .cta-btn-secnd {
+        border-radius: 12px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+    .mobile-show{
+        display: block;
     }
 }

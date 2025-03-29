@@ -15,7 +15,7 @@ function About() {
                     <p>Founded by Pardeep Kaur Sandhu</p>
                     <p> We specialize in crafting unique digital experiences for businesses.</p>
                 </div>
-                <div className='about-hero-right'>
+                <div className='about-hero-right mobile-hide'>
                     <img alt='' src='./book.png'></img>
                 </div>
             </section>
@@ -47,7 +47,7 @@ function About() {
                             </p>
                         </div>
                     </div>
-                    <video autoPlay loop muted className="team-member-video">
+                    <video autoPlay loop muted className="team-member-video mobile-hide">
                         <source src="/logo-animation.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -70,7 +70,7 @@ function About() {
                         <p>From strategy to execution, we cover every angle to ensure your brand thrives.</p>
                     </div>
 
-                    <div className="why-us-item">
+                    <div className="why-us-item span-2">
                         <img alt='' src='./dollar.png'></img>
                         <h3>ROI-Focused Campaigns</h3>
                         <p>We prioritize your bottom line, crafting campaigns that maximize return on investment.</p>

@@ -143,9 +143,14 @@
 
     .services-grid {
         grid-template-columns: 1fr;
+        animation: blurInTop 10s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+        animation-fill-mode: forwards;
     }
 
     .service-content h3 {
         font-size: 1.25rem;
     }
+    
 }

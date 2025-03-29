@@ -2,21 +2,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2.4rem;
+    padding: 1.2rem;
     background-color: var(--bg-color);
     position: sticky;
     top: 0;
+    margin: 0;
     z-index: 1000;
 }
 
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
 .logo img {
+    display: block;
     height: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .nav-link {
@@ -34,7 +43,26 @@
     transform: scale(1.2);
 }
 
-.menu button {
-    text-decoration: none;
-    color: var(--text-color);
+@media(max-width: 768px) {
+    .navbar {
+        display: flexbox;
+        padding: 10px 10px 10px 4px;
+        position: relative;
+    }
+
+    .logo img {
+        height: 24px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
 }

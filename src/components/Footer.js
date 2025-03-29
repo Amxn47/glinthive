@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div className="footer-brand">
+                <div className="footer-brand mobile-hide">
                     <h3>Glint Hive Creations</h3>
                     <p>Empowering your brand to soar.</p>
                 </div>

@@ -25,23 +25,23 @@ function Portfolio() {
     const clientSuccessItems = [
         { 
             thumbnail: "/success1.jpg", 
-            title: "ADOLF HITLER", 
-            description: "Helpled in scoring 17 million kills by designing posters to spread love for the Nazis." 
+            title: "John Doe", 
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum sunt et enim possimus dolore a placeat quas repellendus ratione!" 
         },
         { 
             thumbnail: "/success2.jpg", 
-            title: "OSAMA BIN LADEN", 
-            description: "Designed an award-winning website for 9-11, boosting youth to apply for various position in ISIS by 500%." 
+            title: "Henna", 
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum sunt et enim possimus dolore a placeat quas repellendus ratione!" 
         },
         { 
             thumbnail: "/success3.jpg", 
-            title: "JOSEPH STALIN", 
-            description: "Assisted in organizing campaigns for forced labour. Eventually leading to a score of 25 million kills in just 27 years." 
+            title: "Charlie", 
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum sunt et enim possimus dolore a placeat quas repellendus ratione!" 
         },
         { 
             thumbnail: "/success4.jpg", 
-            title: "GANDHI", 
-            description: "Designed the Indian currency and put my portrait on the front. Did nothing great but the nation needs me whatsoever. Thank you GlintHive Creations for making me so important." 
+            title: "Jeff", 
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum sunt et enim possimus dolore a placeat quas repellendus ratione!" 
         },
     ];
 
@@ -53,7 +53,7 @@ function Portfolio() {
                     <h1>See the Magic We Create!</h1>
                     <p>Check out some of our recent projects across industries.</p>
                 </div>
-                <div className="portfolio-hero-right">
+                <div className="portfolio-hero-right mobile-hide">
                     <img alt="" src="/folder.png" />
                 </div>
             </section>
@@ -61,7 +61,7 @@ function Portfolio() {
             {/* Portfolio Showcase */}
             <section className="portfolio-showcase">
                 {/* Social Media Posts */}
-                <div className="portfolio-section social-section">
+                <div className="portfolio-section social-section mobile-hide">
                     <h2>Social Media Posts</h2>
                     <div className="social-slider">
                         <div className="slider-track">

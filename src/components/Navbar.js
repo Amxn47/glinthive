@@ -9,15 +9,16 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className='logo'>
-                    <img src='./navlogo.png' alt='navlogo'></img>
+                    <Link to="/"><img src='./navlogo.png' alt='navlogo'></img></Link>
                 </div>
                 <div className='menu'>
-                    <Link to="/" className='nav-link'>Home</Link>
+                    <Link to="/" className='nav-link mobile-hide'>Home</Link>
                     <Link to="/about" className='nav-link'>About Us</Link>
                     <Link to="/services" className='nav-link'>Services</Link>
-                    <Link to="/portfolio" className='nav-link'>Portfolio</Link>
+                    <Link to="/portfolio" className='nav-link mobile-hide'>Portfolio</Link>
                     <Link to="/contact" className='nav-link'>Contact Us</Link>
                 </div>
+
             </nav>
         </>
     );

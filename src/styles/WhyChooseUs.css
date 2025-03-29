@@ -63,15 +63,32 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .why-choose-us {
+        padding: 0;
+        justify-content: center;
+    }
+
     .why-choose-us h2 {
         font-size: 2rem;
     }
 
     .wcu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        max-width: 94vw;
+    }
+
+    .wcu-card img {
+        scale: 0.8;
     }
 
     .wcu-content h3 {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    .wcu-content p {
+        font-size: 12px;
+        text-align: left;
+        padding: 0;
     }
 }
