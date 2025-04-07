@@ -10,9 +10,9 @@ function Home() {
   return (
     <div className='home-container'>
       <HeroSection
-        headline="Let Your Brand Fly with"
+        headline="Let Your Brand Fly "
         headline1="Glint Hive Creations 🚀"
-        cta1={{ text: 'Get a Free Consultation', link: '/contact' }}
+        cta1={{ text: "Maximize Your Reach", link: '/contact' }}
         cta2={{ text: 'See Our Work', link: '/portfolio' }}
       />
       <ServicesOverview />

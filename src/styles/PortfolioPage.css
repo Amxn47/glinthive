@@ -19,8 +19,8 @@
 }
 
 .portfolio-hero-left {
-    flex: 1 40%;
-    min-width: 300px;
+    flex: 10%;
+    min-width: 100px;
     text-align: left;
 }
 
@@ -33,13 +33,13 @@
 }
 
 .portfolio-hero-right img {
-    max-width: 100%;
-    width: 300px;
+    width: 700px;
     transition: all 0.3s ease;
+
 }
 
 .portfolio-hero-right img:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .portfolio-hero h1 {

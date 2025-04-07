@@ -54,7 +54,7 @@ function Portfolio() {
                     <p>Check out some of our recent projects across industries.</p>
                 </div>
                 <div className="portfolio-hero-right mobile-hide">
-                    <img alt="" src="/folder.png" />
+                    <img alt="" src="/change-management.png" />
                 </div>
             </section>
 
