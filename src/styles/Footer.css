@@ -1,136 +1,231 @@
-/* src/styles/Footer.css */
+/* Footer Styles */
 .footer {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 40px 20px 20px;
-    font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  position: relative;
+  background-color: #111;
+}
+
+.footer-overlay {
+  display: none;
 }
 
 .footer-container {
-    max-width: 80vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.footer-brand h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    /* #FFC107 */
-    margin-bottom: 10px;
+/* Map Section */
+.map-section {
+  margin-bottom: 2rem;
 }
 
-.footer-brand p {
-    font-size: 0.9rem;
-    opacity: 0.8;
+.map-heading {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-.footer-nav h4,
-.footer-social h4 {
-    font-size: 1.25rem;
-    font-weight: lighter;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+.map-subheading {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #bbb;
+  margin-bottom: 1rem;
 }
 
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
+.map-placeholder {
+  height: 300px;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.footer-nav ul li {
-    margin-bottom: 10px;
+/* Contact Info */
+.contact-info p {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  margin: 0.625rem 0;
 }
 
-.quicklink {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+.contact-email {
+  color: #ffffff;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
 }
 
-.quicklink:hover {
-    color: var(--primary-color);
-    transform: scale(1.2);
+.contact-email:hover {
+  text-decoration: underline;
 }
 
-.footer-nav ul li {
-    transition: all 0.3s ease;
+.contact-info .footer-contact-button {
+  padding: 0.625rem 1.25rem;
+  border-radius: 6px;
+
+  border: 1px solid white;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
-.footer-nav ul li:hover {
-    transform: scale(1.2) translateX(10px);
+.contact-info .footer-contact-button:hover {
+  background: #ffc107;
+  color: #000000;
+  border: 1px solid #ffc107;
+
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
+/* Regional Contacts */
+.regional-contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
-.social-icons a {
-    display: inline-block;
-    transition: transform 0.3s ease;
+.region {
+  background: #222;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  transition: all 0.3s ease;
 }
 
-.social-icons a img {
-    width: 40px;
-    height: 40px;
-    filter: brightness(80%);
-    /* Slightly muted for dark theme */
-    transition: filter 0.3s ease;
+.region:hover {
+  background: #ffc107;
+  color: #000000;
 }
 
-.social-icons a:hover {
-    transform: scale(1.2);
+/* Services Grid */
+.footerservices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
-.social-icons a:hover img {
-    filter: brightness(100%);
-    /* Brighten on hover */
+.footerservices {
+  background: transparent;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: clamp(0.8125rem, 2.5vw, 0.9375rem);
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
+/* Hover Effect */
+.footerservices:hover {
+  background: #ffc107;
+  color: #000000;
+  border: 2px solid #ffc107;
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-link img {
+  width: clamp(24px, 4vw, 32px);
+  height: clamp(24px, 4vw, 32px);
+  transition: transform 0.3s ease;
+}
+
+.social-link img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
 .footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  color: #bbb;
 }
 
-.footer-bottom p {
-    font-size: 0.85rem;
-    opacity: 0.7;
+.footer-bottom a {
+  color: #ffc107;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
 }
 
-/* Responsive adjustments */
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Enhanced Responsiveness */
 @media (max-width: 768px) {
-    .footer {
-        padding: 0;
-    }
+  .footer {
+    padding: 1.5rem 1rem;
+  }
 
-    .mobile-hide {
-        display: none;
-    }
+  .map-placeholder {
+    height: 200px;
+  }
 
-    .footer-container {
-        max-width: 94vw;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  .regional-contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-    .footer-nav ul {
-        margin: 0 auto;
-        display: flex;
-        gap: 16px;
-    }
+  .footerservices-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for tablets */
+  }
+}
 
-    .quicklink {
-        font-size: 14px;
-    }
+@media (max-width: 480px) {
+  .map-heading {
+    font-size: 1.125rem;
+  }
 
-    .social-icons {
-        justify-content: center;
-    }
+  .map-subheading {
+    font-size: 0.875rem;
+  }
+
+  .contact-info .footer-contact-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .social-link img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footerservices-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller for mobile */
+  }
+
+  .footerservices {
+    padding: 0.625rem 0.75rem; /* Adjusted padding for smaller screens */
+  }
 }

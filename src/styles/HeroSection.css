@@ -1,76 +1,27 @@
 /* src/styles/HeroSection.css */
 .hero-section {
     margin: 0 auto;
-    /* Fixed syntax: 40 auto -> 0 auto */
-    padding-top: 50px;
     padding-bottom: 1px;
     background-color: var(--background-color);
-    /* Changed from --bg-color to match root.css */
 }
 
 .hero-section-width {
     max-width: 80vw;
-    /* Hero section width */
+    height: 100vh;
     margin: 0 auto;
-    /* Center it */
     display: flex;
-    justify-content: space-between;
-    /* Space content and image */
+    justify-content: center;
     align-items: center;
-    /* Vertically center */
 }
 
 .hero-cta {
-    width: 60%;
-    /* 60% of 80vw for content */
     padding: 40px;
-    text-align: left;
-    /* Align text left */
-}
-
-.hero-img {
-    width: 40%;
-    /* 40% of 80vw for image */
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    /* Center image horizontally */
-    align-items: center;
-    /* Center image vertically */
-}
-
-.hero-img img {
-    max-width: 100%;
-    height: auto;
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translate(0);
-    }
-
-    25% {
-        transform: translate(-3px, -5px);
-    }
-
-    50% {
-        transform: translate(0);
-    }
-
-    75% {
-        transform: translate(3px, -5px);
-    }
-
-    100% {
-        transform: translate(0);
-    }
-
+    text-align: center; /* Changed to center */
 }
 
 .hero-section h1 {
-    font-size: 4rem;
-    font-weight: bolder;
+    font-size: 5rem;
+    font-weight:1100;
 }
 
 .mobile-show {
@@ -81,11 +32,9 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* Align buttons left */
+    justify-content: center; /* Changed to center */
     gap: 6px;
     flex-wrap: wrap;
-    /* Allow buttons to wrap if needed */
 }
 
 .subheadline button {
@@ -107,10 +56,10 @@
 }
 
 .cta {
+    
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* Align CTAs left */
+    justify-content: center; /* Changed to center */
     margin-top: 40px;
     margin-bottom: 80px;
     gap: 20px;
@@ -126,7 +75,7 @@
 }
 
 .cta-btn-secnd {
-    padding: 10px;
+    padding: 20px 30px;
     text-decoration: none;
     background-color: transparent;
     border: 2px solid var(--text-color);
@@ -170,7 +119,7 @@
 }
 
 .cta-btn-main {
-    padding: 10px;
+    padding: 20px 30px;
     text-decoration: none;
     background-color: transparent;
     border: 2px solid var(--primary-color);
@@ -248,7 +197,6 @@
         justify-content: center;
         gap: 30px;
         margin: 60px 0 0 0;
-        /* Center CTAs on mobile */
     }
 
     .cta-btn-main {

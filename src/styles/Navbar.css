@@ -1,13 +1,14 @@
+/* src/styles/Navbar.css */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem;
+    padding: 1.2rem 2rem;
     background-color: var(--bg-color);
     position: sticky;
     top: 0;
-    margin: 0;
     z-index: 1000;
+    transition: padding 0.3s ease;
 }
 
 .logo {
@@ -18,18 +19,21 @@
 .logo img {
     display: block;
     height: 40px;
-    margin: 0;
-    padding: 0;
+    width: auto;
+    transition: height 0.3s ease;
 }
 
 .menu {
     display: flex;
     align-items: center;
     gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
 }
 
 .nav-link {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     text-decoration: none;
@@ -40,14 +44,102 @@
 
 .nav-link:hover {
     color: var(--primary-color);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-@media(max-width: 768px) {
+.cta-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-cta {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 8px 16px; /* Reduced size */
+    border-radius: 2rem;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem; /* Slightly smaller text */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* .nav-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.nav-cta:hover::before {
+    width: 200px;
+    height: 200px;
+} */
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
     .navbar {
-        display: flexbox;
-        padding: 10px 10px 10px 4px;
-        position: relative;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-cta .cta-text {
+        font-size: 0; /* Hide original text */
+    }
+    
+    .nav-cta .cta-text::after {
+        content: "Say, Hi";
+        font-size: 0.85rem; /* Matches your existing 768px media query */
+    }
+
+    .nav-cta {
+        flex-direction: row;
+        padding: 6px 12px; /* Keep your existing responsive padding */
+        justify-content: space-between; /* Keep text left, hand right */
+    }
+    
+    .nav-cta lord-icon {
+        margin-left: 8px;
+        order: 1; /* Hand stays on right */
+    }
+    
+    .nav-cta .cta-text {
+        order: 0; /* Text stays on left */
+    }
+
+    /* Add this new rule */
+    .logo img {
+        height: 22px; /* Decrease logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem;
     }
 
     .logo img {
@@ -55,14 +147,24 @@
     }
 
     .menu {
-        gap: 20px;
+        gap: 0.75rem;
     }
 
     .nav-link {
-        font-size: 12px;
+        font-size: 0.85rem;
     }
 
-    .mobile-hide {
-        display: none;
+    .nav-cta {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .nav-cta lord-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+    }
+    .logo img {
+        height: 22px; /* Decrease logo size */
     }
 }

@@ -1,116 +1,139 @@
 // src/pages/Contact.js
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import '../styles/ContactPage.css';
 import '../styles/root.css';
 
 function Contact() {
     const [formData, setFormData] = useState({
-        name: '',
+        fullName: '',
+        businessName: '',
         email: '',
         phone: '',
-        message: ''
+        projectDetails: '',
+        services: []
     });
 
+    const servicesList = [
+        'Digital Marketing And Advertising',
+        'Web Design And Development',
+        'CGI And VFX',
+        'Social Media Management',
+        'SEO',
+        'Branding',
+        'Media Production'
+    ];
+
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleServiceClick = (service) => {
+        const updatedServices = formData.services.includes(service)
+            ? formData.services.filter((s) => s !== service)
+            : [...formData.services, service];
+        setFormData({ ...formData, services: updatedServices });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Log form data to console (replace with email/CRM integration)
         console.log('Form submitted:', formData);
-        // Reset form
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({
+            fullName: '',
+            businessName: '',
+            email: '',
+            phone: '',
+            projectDetails: '',
+            services: []
+        });
         alert('Thank you! We’ll get back to you soon.');
     };
 
     return (
         <div className="contact-page">
-            <div className='cntct'>
-                {/* Hero Section */}
-                <section className="contact-hero">
-                    <h1>Let’s Build Something Amazing Together!</h1>
-                    <p>Drop us a message & we’ll get back to you ASAP.</p>
-                    <img alt='' src='/link.png' className='mobile-hide'></img>
-                </section>
-
-                {/* Contact Form */}
+            <section className="contact-hero">
+                <h1>LET’S BUILD YOUR DIGITAL SUCCESS!</h1>
+                <p>CONNECT WITH US !</p>
+                <p>Complete our brief form, and our dedicated team will make things happen</p>
+            </section>
+            <div className="contact-form-container">
                 <section className="contact-form-section">
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Name <span>*</span></label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                placeholder="Your Name"
-                            />
+                            <label>I'm interested in...</label>
+                            <div className="services-grid">
+                                {servicesList.map((service) => (
+                                    <button
+                                        key={service}
+                                        type="button"
+                                        className={`service-button ${formData.services.includes(service) ? 'selected' : ''}`}
+                                        onClick={() => handleServiceClick(service)}
+                                    >
+                                        {service}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="form-row">
+                            <div className="form-group half">
+                                <label>Full Name <span>*</span></label>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
+                                    required
+                                    placeholder="Full Name"
+                                />
+                            </div>
+                            <div className="form-group half">
+                                <label>Business Name</label>
+                                <input
+                                    type="text"
+                                    name="businessName"
+                                    value={formData.businessName}
+                                    onChange={handleChange}
+                                    placeholder="Business Name"
+                                />
+                            </div>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email <span>*</span></label>
+                            <label>Email <span>*</span></label>
                             <input
                                 type="email"
-                                id="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                placeholder="Your Email"
+                                placeholder="Email"
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="phone">Phone Number</label>
+                            <label>Phone Number <span>*</span></label>
                             <input
                                 type="tel"
-                                id="phone"
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder="Your Phone Number"
+                                required
+                                placeholder="Phone Number"
+                                defaultValue="+91"
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="message">Message</label>
+                            <label>Tell us about your project</label>
                             <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
+                                name="projectDetails"
+                                value={formData.projectDetails}
                                 onChange={handleChange}
-                                placeholder="Your Message (Optional)"
+                                placeholder="Tell us about your project"
                             />
                         </div>
-                        <button type="submit" className="submit-button">Submit</button>
+                        <button type="submit" class="footer-cta-button">SEND REQUEST<img alt='' class='arrow' src='/arrow.png'></img></button>
                     </form>
                 </section>
             </div>
-
-            {/* Direct Contact Details */}
-            <section className="contact-details">
-                <h2>Get in Touch</h2>
-                <div className="details-grid">
-                    <div className='cnt'>
-                        <img alt='' src='/call.png' className='cnt-ico'></img>
-                        <p>Phone: <a href="tel:+91 95011-03113">+91 95011-03113</a></p>
-                    </div>
-                    <div className='cnt'>
-                        <img alt='' src='/sms.png' className='cnt-ico'></img>
-                        <p>Email: <a href="mailto:glinthive@gmail.com">glinthive@gmail.com</a></p>
-                    </div>
-                    <div className='cnt'>
-                        <img alt='' src='/map.png' className='cnt-ico'></img>
-                        <div className='cnt-add'>
-                            <p>Plot No. 209 Ground Floor, Phase 5,</p>
-                            <p>Industrial Area, SAS Nagar</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
-
     );
 }
 
