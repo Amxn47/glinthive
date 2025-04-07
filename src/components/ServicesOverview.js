@@ -25,7 +25,7 @@ function ServicesOverview() {
         },
         {
             title: "Social Media Management",
-            image: './Social-Media-Management.jpg',
+            image: './Social-media-management.jpg',
             alt: "Social Media Management",
             captions: ["Growth & Engagement Tactics", "Content Creation", "Content Strategy & Social Media Marketing & Trends"]
         },
