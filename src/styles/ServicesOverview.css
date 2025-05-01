@@ -1,181 +1,156 @@
+/* src/styles/ServicesOverview.css */
+
 .services-overview {
-    padding: 60px 0px;
+    padding: 60px 20px;
     text-align: center;
-    color: var(--text-color); /* Light text color */
+    background-color: var(--bg-color);
 }
 
 .services-overview h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary-color); /* Amber for headings */
-    text-transform: uppercase;
-    font-weight: bold;
+    color: var(--primary-color);
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid as in the image */
-    gap: 50px; /* Reduced gap for better balance */
-    max-width: 1400px;
-    margin: 10px auto;
-    padding: 0 20px; /* Add horizontal padding for better alignment */
-    animation: fadeIn 1s ease-out;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 80vw;
+    margin: 0 auto;
+    animation: blurInTop 0.8s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    animation-fill-mode: forwards;
+    opacity: 0; 
+    transform: translateY(100%) scale(0.6);
+    filter: blur(20px);
 }
 
-.flip-card {
-    width: 100%; /* Full width within grid */
-    height: 400px; /* Match your card height */
-    perspective: 1000px; /* 3D perspective */
-    border-radius: 12px; /* Match your design */
+.service-card {
+    background: var(--card-bg);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Match your shadow */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s; /* Match your transition duration */
-    transform-style: preserve-3d; /* Enable 3D transformations */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Additional shadow from example */
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flip on Y-axis as per example */
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; /* Hide back face when not visible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
-.flip-card-front {
-    background: linear-gradient(135deg, #1e1e1e7d); /* Match your gradient */
-    color: var(--text-color); /* Light text */
-}
-
-.flip-card-back {
-    background-color: #ffffff00; /* Transparent background */
-    color: var(--text-color);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.service-card:hover {
+    transform: translateY(-10px);
 }
 
 .service-image {
-    width: 100%;
-    height: 250px; /* Increased height for better image display */
-    object-fit: cover;
-    filter: brightness(1.2); /* Slight enhancement */
+    margin: 40px;
+    width: auto;
+    height: 100px;
+    object-fit: contain;
 }
 
 .service-content {
-    flex-grow: 1;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    flex-grow: 1;
 }
 
 .service-content h3 {
+    text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 20px; /* Adjusted for removed description */
-    color: var(--text-color); /* Purple for titles */
-    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
-/* Removed .service-content p since description is gone */
+.service-content p {
+    text-align: justify;
+    font-size: 1rem;
+    margin: 20px auto;
+    width: 80%;
+    flex-grow: 1;
+}
+
 .service-btn {
-    display: none; /* Hide the front-side button */
+    margin-bottom: 30px;
+    margin-top: auto;
 }
 
-/* Removed .explore-button styles since it's no longer used on the front */
-
-/* Back side styling */
-.back-title {
-    font-size: 1.8rem;
-    color: var(--primary-color); /* Light text */
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.dynamic-caption {
-    font-size: 1.2rem;
-    color: var(--text-color); /* Light text */
-    text-align: center;
+/* Button styles with Hero Section animation */
+.explore-button {
+    position: relative;
     padding: 10px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease; /* Smooth transition for text change */
-}
-.back-button,
-.back-button::before {
-    display: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.back-button:hover {
-    background: var(--primary-color); /* Dark text on hover */
-    border-radius: 25px;
+/* Background fill animation */
+.explore-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    clip-path: ellipse(0% 100% at 0% 50%);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+/* Hover effects */
+.explore-button:hover {
+    border-color: var(--primary-color);
+    /* Full border on hover */
     color: black;
-    border: 2px solid rgb(104, 109, 4); /* Amber border */
-
+    /* Text color change */
 }
 
-.back-button:hover::before {
-    clip-path: circle(100% at 50% 50%);
+.explore-button:hover::before {
+    clip-path: ellipse(150% 100% at 0% 50%);
 }
 
-@keyframes fadeIn {
+.blurInTop {
+    animation-name: blurInTop
+}
+
+@keyframes blurInTop {
     from {
+        transform: translateY(100%) scale(0.6);
+        filter: blur(20px);
         opacity: 0;
     }
+
     to {
+        transform: translateY(0) scale(1);
+        filter: blur(0);
         opacity: 1;
     }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 30px; /* Reduced gap for single column */
-    }
-
     .services-overview h2 {
         font-size: 2rem;
     }
 
-    .service-image {
-        height: 200px; /* Adjusted height for mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        animation: blurInTop 0.5s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+        animation-fill-mode: forwards;
     }
 
-    .flip-card {
-        height: 350px; /* Adjusted height for mobile */
+    .service-content h3 {
+        font-size: 1.25rem;
     }
-
-    .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg) scale(1); /* Disable scale on mobile to avoid overlap */
-    }
-
-    .back-title {
-        font-size: 1.5rem;
-    }
-
-    .back-button {
-        padding: 8px 15px;
-    }
+    
 }

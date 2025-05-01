@@ -5,7 +5,7 @@ import ScrollToTop from './components/ScrollToTop.js'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import WhatWeDo from './pages/WhatWeDo';
+import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/WhatWeDo" element={<WhatWeDo />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
