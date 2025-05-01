@@ -1,7 +1,6 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop.js'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,7 +12,7 @@ import './styles/root.css';
 
 
 function App() {
-  
+
   return (
     <Router>
       <Navbar />
