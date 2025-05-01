@@ -23,3 +23,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
 }
+
+.mobile-hide{
+    display: none;
+}

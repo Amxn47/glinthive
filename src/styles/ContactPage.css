@@ -119,8 +119,10 @@
     position: relative;
     padding: 15px 30px;
     text-decoration: none;
-    background-color: transparent;
-    color: var(--primary-color);
+    /* background-color: transparent; */
+    background-color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: black;
     border: 2px solid var(--primary-color);
     border-radius: 12px;
     display: inline-flex;
@@ -134,7 +136,7 @@
     z-index: 0;
 }
 
-.submit-button::before {
+/* .submit-button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -145,15 +147,16 @@
     clip-path: ellipse(0% 100% at 0% 50%);
     transition: clip-path 0.4s ease-in-out;
     z-index: -1;
-}
+} */
 
 .submit-button:hover {
-    color: black;
+    /* color: black; */
+    transform: translateY(3px) scale(1.05);
 }
 
-.submit-button:hover::before {
+/* .submit-button:hover::before {
     clip-path: ellipse(150% 100% at 0% 50%);
-}
+} */
 
 /* Direct Contact Details */
 .contact-details {
