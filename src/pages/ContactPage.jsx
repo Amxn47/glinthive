@@ -94,17 +94,16 @@ function Contact() {
                 <div className="details-grid">
                     <div className='cnt'>
                         <img alt='' src='/call.png' className='cnt-ico'></img>
-                        <p>Phone: <a href="tel:+91 95011-03113">+91 95011-03113</a></p>
+                        <p>Phone: <a href="tel:+91 99999-10101">+91 99999-10101</a></p>
                     </div>
                     <div className='cnt'>
                         <img alt='' src='/sms.png' className='cnt-ico'></img>
-                        <p>Email: <a href="mailto:glinthive@gmail.com">glinthive@gmail.com</a></p>
+                        <p>Email: <a href="mailto:glinthive@gmail.com">project.glinthive@zmail.com</a></p>
                     </div>
                     <div className='cnt'>
                         <img alt='' src='/map.png' className='cnt-ico'></img>
                         <div className='cnt-add'>
-                            <p>Plot No. 209 Ground Floor, Phase 5,</p>
-                            <p>Industrial Area, SAS Nagar</p>
+                            <p>Somewhere near the End portal</p>
                         </div>
                     </div>
                 </div>
