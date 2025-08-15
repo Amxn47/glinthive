@@ -38,9 +38,9 @@ function About() {
             <section className="about-team">
                 <div className="team-member">
                     <div className="team-member-content">
-                        <img src="/pardeep.jpg" alt="Pardeep Kaur Sandhu" className="team-photo" />
+                        <img src="/sucess1.jpg" alt="co-founder" className="team-photo" />
                         <div className="team-mem-detail">
-                            <h3>Pardeep Kaur Sandhu</h3>
+                            <h3>John Doe</h3>
                             <p>Co-Founder</p>
                             <p className="bio">
                                 With a passion for digital innovation, Pardeep leads Glint Hive Creations to empower brands through strategic marketing and creative design.
